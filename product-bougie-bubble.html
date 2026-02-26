@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NBGBXY6HN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3NBGBXY6HN');
+</script>
+<meta name="description" content="Rent our 12x12 clear Bougie Bubble in Newport for your next party! Perfect for custom backyard dinners, proposals, or events. We handle delivery and setup!">
+<meta name="keywords" content="bubble tent rental Newport, clear dome hire Oregon Coast, DIY luxury event space, backyard party dome, transparent event tent, Newport OR party rentals, Bougie Beach Party Co">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bougie Bubble | Bougie Beach Party Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Slab:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png">
+    <style>
+        /* --- Product Page Specific Styles --- */
+        
+        /* Ensure box-sizing is handled correctly */
+        * { box-sizing: border-box; }
+
+        /* === UNIFIED SQUARE GALLERY STYLES === */
+        .gallery-wrapper {
+            position: relative;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        /* Desktop: 4-Column Grid logic for perfect squares */
+        .gallery-track {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 Equal columns */
+            grid-auto-rows: auto;
+            gap: 15px;
+            width: 100%;
+            /* Removed fixed height to allow squares to maintain ratio naturally */
+        }
+
+        /* Common Image Styles */
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image fills the square without squishing */
+            aspect-ratio: 1 / 1; /* FORCE SQUARE SHAPE */
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            display: block; 
+        }
+
+        .gallery-img:hover {
+            opacity: 0.9;
+        }
+
+        /* The First Image acts as the "Glamour Shot" (2x2 Square) */
+        .gallery-img:first-child {
+            grid-column: span 2; /* Spans 2 columns wide */
+            grid-row: span 2;    /* Spans 2 rows tall */
+            cursor: default;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        /* Mobile Dots (Hidden on Desktop) */
+        .gallery-dots {
+            display: none;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ddd;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: var(--gold);
+        }
+
+        /* === STANDARD PRODUCT LAYOUT === */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .product-desc {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 30px;
+            font-size: 1rem;
+            color: var(--ink);
+        }
+
+        .feature-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 1.1rem;
+        }
+
+        /* Terms Section */
+        .terms-box {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 30px;
+            border-radius: var(--radius);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .terms-box h4 { color: var(--ink); margin-bottom: 15px; }
+        .terms-box ul { list-style: disc; padding-left: 20px; margin-bottom: 15px; }
+        .terms-box li { margin-bottom: 8px; }
+
+        /* Booking Card */
+        .booking-card {
+            background: #ffffff;
+            padding: 40px 35px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); 
+            border: 1px solid #f0f0f0;
+            position: sticky;
+            top: 100px; 
+        }
+
+        .price-tag {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .price-sub {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 25px;
+            display: block;
+            font-weight: 300;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 0.95rem;
+        }
+        
+        .detail-row:last-of-type { border-bottom: none; }
+        .detail-label { font-weight: 600; color: var(--ink); }
+        .detail-val { color: #666; text-align: right; }
+
+        /* Inquiry Form (Hidden by default) */
+        .inquiry-form {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: var(--font-body);
+            background: #fafafa;
+        }
+        
+        .form-input:focus {
+            background: #fff;
+            outline: 1px solid var(--gold);
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* === MOBILE RESPONSIVENESS === */
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+            .booking-card { position: static; margin-top: 20px; padding: 25px; }
+            
+            /* Mobile Gallery: Horizontal Swipe */
+            .gallery-track {
+                display: flex; /* Switch from Grid to Flex */
+                overflow-x: auto;
+                scroll-snap-type: x mandatory; 
+                gap: 15px; 
+                border-radius: var(--radius);
+                scrollbar-width: none; 
+                padding-bottom: 10px; /* Space for shadow */
+            }
+            
+            .gallery-track::-webkit-scrollbar {
+                display: none; 
+            }
+
+            .gallery-img {
+                /* On mobile, we make them big square cards */
+                width: 85vw;     
+                flex: 0 0 85vw;  
+                aspect-ratio: 1 / 1; /* KEEP SQUARE ON MOBILE */
+                scroll-snap-align: center;
+                
+                /* Reset Grid Logic for Mobile */
+                grid-column: auto !important;
+                grid-row: auto !important;
+            }
+
+            /* Show Dots */
+            .gallery-dots {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png" alt="Logo"></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="../pages/packages.html" class="nav-link dropdown-toggle">Explore ▾</a>
+                    <div class="dropdown-content">
+                        <a href="../pages/packages.html">All Rentals</a>
+                        <a href="../themes/watch-party.html">Watch Parties</a>
+                        
+                        <a href="product-styled-soiree.html">Styled Soiree</a>
+                        <a href="product-basic-movie.html">Basic Movie Night</a>
+                        <a href="product-box-office.html">Box Office Bubble</a>
+                        <a href="product-dome-dining.html">The Dome Dining Experience</a>
+                        <a href="product-bougie-bubble.html">The Bougie Bubble</a>
+                    </div>
+                </div>
+                <a href="../pages/contact.html" class="nav-link">Contact</a>
+                <a href="../pages/faq.html" class="nav-link">FAQ</a>
+                <a href="https://thebougiebeachpartyco.rentmy.shop/cart" class="btn btn-primary" style="padding: 10px 20px; display: flex; align-items: center; gap: 8px;">
+                    <span>Cart</span>
+                    <span style="font-size: 1.2rem;">🛒</span>
+                </a>
+            </nav>
+            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+        </div>
+    </header>
+
+    <div class="section-pad" style="padding-bottom: 30px; background-color: #ffffff;">
+        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
+            <span style="font-family: var(--font-accent); font-size: 1.8rem; color: var(--gold); display: block; margin-bottom: 5px;">Create Your Own Magic</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">The Bougie Bubble</h1>
+            <p style="font-size: 1.2rem; color: var(--ink);">A blank canvas for your creativity. You design the vibe, we handle the dome.</p>
+        </div>
+    </div>
+
+    <div class="section-pad" style="padding-top: 10px; background-color: #ffffff;">
+        <div class="container">
+            
+            <div class="gallery-wrapper">
+                <div class="gallery-track" id="galleryTrack">
+                    <img src="https://raw.githubusercontent.com/GabrielaFiona/Drafts-bougiebeachpartyco/f655050299a11c2fb60691621dda1f2d8daeacfc/assets/img/bubbleoutsidealone.png" class="gallery-img" alt="Bougie Bubble Main">
+                    
+                    <img src="https://raw.githubusercontent.com/GabrielaFiona/Drafts-bougiebeachpartyco/5067910fbdc375149868a53fbf47705cbd237ac7/assets/img/outsidebrunchbubble.png" class="gallery-img" alt="Detail 1">
+                    <img src="https://raw.githubusercontent.com/GabrielaFiona/Drafts-bougiebeachpartyco/5067910fbdc375149868a53fbf47705cbd237ac7/assets/img/couplemovienightbubblelit.png" class="gallery-img" alt="Detail 2">
+                    <img src="https://raw.githubusercontent.com/GabrielaFiona/Drafts-bougiebeachpartyco/5067910fbdc375149868a53fbf47705cbd237ac7/assets/img/4mencardbubbleyard.png" class="gallery-img" alt="Detail 3">
+                    <img src="https://raw.githubusercontent.com/GabrielaFiona/Drafts-bougiebeachpartyco/5067910fbdc375149868a53fbf47705cbd237ac7/assets/img/christmasteensbubble.png" class="gallery-img" alt="Detail 4">
+                </div>
+                
+                <div class="gallery-dots" id="galleryDots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                
+                <div class="product-content">
+                    <h3>The Ultimate Backyard Flex</h3>
+                    <p class="product-desc">
+                        Create your own magic inside our 12×12 clear <em>Bougie Bubble Dome</em>! Rent the bubble by itself and transform it however you like — a dreamy dinner, proposal, game night, or glamping moment in your own backyard.
+                    </p>
+                    <p class="product-desc">
+                        We handle the heavy lifting: delivery, professional inflation, securing the dome, and teardown. You just bring your creative vision and enjoy the view.
+                    </p>
+
+                    <div style="background: #fcfcfc; border: 1px solid #f0f0f0; padding: 30px; border-radius: var(--radius); margin-top: 30px;">
+                        <h4 style="color: var(--smokey-blue);">What's Included</h4>
+                        <ul class="feature-list">
+                            <li><strong>12×12 Transparent Dome:</strong> Spacious enough for 6-8 people sitting.</li>
+                            <li><strong>Professional Setup:</strong> Secured safely to the ground.</li>
+                            <li><strong>Extension Cords:</strong> We provide power for the inflation blower.</li>
+                            <li><strong>Teardown:</strong> We pack it all away when you're done.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-box">
+                        <h4>📋 DIY Rental Terms</h4>
+                        <ul>
+                            <li><strong>Power:</strong> Requires a grounded outlet within 20ft (the blower must run continuously).</li>
+                            <li><strong>Decor:</strong> NO tape, glue, glitter, confetti, or paint on the bubble walls.</li>
+                            <li><strong>Surface:</strong> Must be set up on flat grass or smooth pavement (no sharp rocks/gravel).</li>
+                            <li><strong>Weather:</strong> Setup is wind-dependent. We cannot set up in winds over 15mph.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="booking-card">
+                    <span class="price-tag">$200.00</span>
+                    <span class="price-sub">Standard 4-Hour Rental</span>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <div class="detail-row">
+                            <span class="detail-label">Size</span>
+                            <span class="detail-val">12ft x 12ft</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-val">Backyard / Private Land</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Weather</span>
+                            <span class="detail-val">Wind Dependent</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button id="cardInquiryBtn" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;">Check Availability ▾</button>
+                        <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">We check weather & location before booking.</p>
+                    </div>
+
+                    <div id="cardInquiryForm" class="inquiry-form">
+                        <form action="https://formspree.io/f/xgvrevpl" method="POST">
+                            <input type="hidden" name="service" value="Bougie Bubble Only Inquiry">
+                            
+                            <label style="font-size:0.9rem; font-weight:bold; display:block; margin-bottom:5px;">Name</label>
+                            <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+
+                            <label style="font-size:0.9rem; font-weight:bold; display:block; margin-bottom:5px;">Email</label>
+                            <input type="email" name="email" class="form-input" placeholder="email@example.com" required>
+
+                            <label style="font-size:0.9rem; font-weight:bold; display:block; margin-bottom:5px;">Desired Date</label>
+                            <input type="date" name="date" class="form-input" required>
+
+                            <label style="font-size:0.9rem; font-weight:bold; display:block; margin-bottom:5px;">Location / Address</label>
+                            <input type="text" name="location" class="form-input" placeholder="e.g. Backyard in Newport" required>
+
+                            <button type="submit" class="btn btn-accent" style="width:100%; margin-top:10px;">Send Inquiry</button>
+                        </form>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="background: var(--page-pink);">
+             <path fill="#ffffff" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <footer class="bbp-footer" role="contentinfo">
+        <div class="bbp-logo-wrap">
+          <img class="bbp-logo" src="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png" alt="Logo">
+        </div>
+        <h3 class="bbp-name">The Bougie Beach Party Co.</h3>
+        <div class="bbp-actions">
+          <a class="bbp-btn primary" href="mailto:thebougiebeachpartyco@gmail.com">💌 Email Us</a>
+          <a class="bbp-btn alt" href="tel:+15413518497">📞 Call / Text (541) 351-8497</a>
+        </div>
+        <div class="bbp-socials">
+          <a href="https://www.instagram.com/thebougiebeachpartyco" target="_blank"><svg viewBox="0 0 24 24"><path d="M7.75 2C4.126 2 2 4.126 2 7.75v8.5C2 19.874 4.126 22 7.75 22h8.5C19.874 22 22 19.874 22 16.25v-8.5C22 4.126 19.874 2 16.25 2h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.75a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5zM18 6.5a1 1 0 1 1-2 0a1 1 0 0 1 2 0z" /></svg></a>
+          <a href="https://www.facebook.com/thebougiebeachpartyco" target="_blank"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.87v-7H8v-2.87h2.5v-2.2c0-2.47 1.48-3.83 3.74-3.83c1.08 0 2.2.19 2.2.19v2.4h-1.24c-1.22 0-1.6.76-1.6 1.54v1.9H17l-.4 2.87h-2.5v7A10 10 0 0 0 22 12" /></svg></a>
+        </div>
+        <div class="bbp-bottom">© 2026 Bougie Beach Party Co. • All rights reserved. Some images shown are digitally staged or AI-generated to illustrate possible event setups. Real event photos are also provided for reference. Actual client setups may vary based on customization and décor.</div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Booking Card Logic ---
+            const cardBtn = document.getElementById('cardInquiryBtn');
+            const cardForm = document.getElementById('cardInquiryForm');
+            
+            if(cardBtn && cardForm) {
+                cardBtn.addEventListener('click', () => {
+                    if(cardForm.style.display === 'block') {
+                        cardForm.style.display = 'none';
+                        cardBtn.textContent = 'Check Availability ▾';
+                    } else {
+                        cardForm.style.display = 'block';
+                        cardBtn.textContent = 'Close Form ▴';
+                    }
+                });
+            }
+
+            // --- Gallery Logic ---
+            const track = document.getElementById('galleryTrack');
+            const images = track.querySelectorAll('.gallery-img');
+            const dots = document.querySelectorAll('.dot');
+            const isMobile = window.innerWidth <= 900;
+
+            // 1. Desktop Click to Swap
+            images.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    // Only active on Desktop (when display is grid)
+                    if(window.getComputedStyle(track).display === 'grid') {
+                        if (index !== 0) {
+                            const mainSrc = images[0].src;
+                            images[0].src = img.src;
+                            img.src = mainSrc;
+                        }
+                    }
+                });
+            });
+
+            // 2. Mobile Scroll Active Dot Logic
+            track.addEventListener('scroll', () => {
+                const scrollLeft = track.scrollLeft;
+                const width = track.offsetWidth;
+                // Calculate which image is mostly visible
+                const index = Math.round(scrollLeft / (width * 0.85)); // approximate due to 85vw width
+                
+                dots.forEach(d => d.classList.remove('active'));
+                if(dots[index]) {
+                    dots[index].classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

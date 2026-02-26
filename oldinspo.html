@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Inspiration | Bougie Beach Party Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Slab:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <style>
+        /* Mobile Layout Adjustment: Fixes "Left Lean" */
+        @media (max-width: 768px) {
+            .explore-grid {
+                /* Forces a single column that fits the screen width */
+                grid-template-columns: 1fr !important; 
+                justify-items: center;
+            }
+            .vibe-card {
+                /* Ensures cards don't overflow and stay centered */
+                width: 100%;
+                max-width: 450px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png" alt="Logo"></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="explore.html" class="nav-link dropdown-toggle active">Explore ▾</a>
+                   <div class="dropdown-content">
+                        <a href="celebrations.html">Celebrations</a>
+                        <a href="explore.html">Inspiration</a>
+                        <a href="packages.html">All Rentals</a>
+                        <a href="product-styled-soiree.html">Styled Soiree</a>
+                        <a href="product-basic-movie.html">Basic Movie Night</a>
+                        <a href="product-box-office.html">Box Office Bubble</a>
+                        <a href="product-dome-dining.html">The Dome Dining Experience</a>
+                        <a href="product-bougie-bubble.html">The Bougie Bubble</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="https://thebougiebeachpartyco.rentmy.shop/cart" class="btn btn-primary" style="padding: 10px 20px; display: flex; align-items: center; gap: 8px;">
+                    <span>Cart</span>
+                    <span style="font-size: 1.2rem;">🛒</span>
+                </a>
+            </nav>
+            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+        </div>
+    </header>
+
+    <div class="section-pad" style="padding-bottom: 40px; background-color: var(--white);">
+        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
+            <h1 style="font-size: 3rem;">Find Your Vibe</h1>
+            <p style="font-size: 1.2rem; color: var(--ink);">Not sure where to start? We’ve curated some ideas for you. Whether it's a girls' trip or a romantic sunset, we have the setup.</p>
+        </div>
+    </div>
+
+    <div class="section-pad" style="padding-top: 20px;">
+        <div class="container">
+            <div class="explore-grid">
+                <div class="vibe-card">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=2670&auto=format&fit=crop" class="vibe-img" alt="Girls Brunch">
+                    <div class="vibe-overlay">
+                        <h3>Girls' Gathering</h3>
+                        <p>Mimosas, ocean views, and zero stress. Perfect for bachelorettes or just because.</p>
+                        <a href="packages.html#picnics" class="btn btn-accent">Shop Picnics</a>
+                    </div>
+                </div>
+
+                <div class="vibe-card">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2670&auto=format&fit=crop" class="vibe-img" alt="Date Night">
+                    <div class="vibe-overlay">
+                        <h3>Romantic Date Night</h3>
+                        <p>Watch the sunset from inside a warm bubble. We handle the roses and the ambiance.</p>
+                        <a href="packages.html#picnics" class="btn btn-accent">Plan a Date</a>
+                    </div>
+                </div>
+
+                <div class="vibe-card">
+                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2670&auto=format&fit=crop" class="vibe-img" alt="Movie Night">
+                    <div class="vibe-overlay">
+                        <h3>Family Movie Night</h3>
+                        <p>Popcorn, 4K projector, and the sound of waves. A cinema experience like no other.</p>
+                        <a href="movie-night.html" class="btn btn-accent">Book Cinema</a>
+                    </div>
+                </div>
+
+                <div class="vibe-card">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=2580&auto=format&fit=crop" class="vibe-img" alt="DIY Party">
+                    <div class="vibe-overlay">
+                        <h3>DIY Beach Bash</h3>
+                        <p>Want to build it yourself? Rent chairs, games, and umbrellas à la carte.</p>
+                        <a href="packages.html" class="btn btn-accent">View Rentals</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px; padding-bottom: 80px;">
+                <p style="font-size: 1.5rem; font-family: var(--font-accent); margin-bottom: 20px;">Ready to create some memories?</p>
+                <a href="contact.html" class="btn btn-secondary">Contact Us for Custom Ideas</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bbp-footer" role="contentinfo">
+        <div class="bbp-logo-wrap">
+          <img class="bbp-logo" src="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png" alt="Logo">
+        </div>
+        <h3 class="bbp-name">The Bougie Beach Party Co.</h3>
+        <div class="bbp-actions">
+          <a class="bbp-btn primary" href="mailto:thebougiebeachpartyco@gmail.com">💌 Email Us</a>
+          <a class="bbp-btn alt" href="tel:+15413518497">📞 Call / Text (541) 351-8497</a>
+        </div>
+        <div class="bbp-socials">
+          <a href="https://www.instagram.com/thebougiebeachpartyco" target="_blank"><svg viewBox="0 0 24 24"><path d="M7.75 2C4.126 2 2 4.126 2 7.75v8.5C2 19.874 4.126 22 7.75 22h8.5C19.874 22 22 19.874 22 16.25v-8.5C22 4.126 19.874 2 16.25 2h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.75a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5zM18 6.5a1 1 0 1 1-2 0a1 1 0 0 1 2 0z" /></svg></a>
+          <a href="https://www.facebook.com/thebougiebeachpartyco" target="_blank"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.87v-7H8v-2.87h2.5v-2.2c0-2.47 1.48-3.83 3.74-3.83c1.08 0 2.2.19 2.2.19v2.4h-1.24c-1.22 0-1.6.76-1.6 1.54v1.9H17l-.4 2.87h-2.5v7A10 10 0 0 0 22 12" /></svg></a>
+        </div>
+        <div class="bbp-bottom">© 2026 Bougie Beach Party Co. • All rights reserved.</div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
