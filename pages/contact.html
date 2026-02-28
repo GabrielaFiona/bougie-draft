@@ -46,6 +46,16 @@
 /* Bottom CTA: keep desktop intact; only adjust on mobile */
 .bbp-bottom-cta{ background-color: var(--page-pink); }
 
+
+
+/* Desktop: keep CTAs side-by-side (override inline grid if needed) */
+@media (min-width: 769px){
+  .bbp-bottom-cta-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 40px !important;
+  }
+}
+
 /* Mobile fixes (override inline styles safely) */
 @media (max-width: 768px){
   .bbp-bottom-cta{ padding-left: 0 !important; padding-right: 0 !important; }
