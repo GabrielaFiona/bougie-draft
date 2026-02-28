@@ -71,6 +71,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
+      max-width: 950px; /* Constrains width so it doesn't stretch too far on desktop */
+      margin: 0 auto;   /* Centers the grid itself */
     }
     @media (max-width: 768px) {
       .bbp-bottom-cta-grid {
