@@ -67,6 +67,23 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Slab:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/style.css">
+      <style>
+/* ONLY affects mobile */
+@media (max-width: 768px) {
+
+  /* Target the very bottom pink section only */
+  .section-pad[style*="var(--page-pink)"] .container > div {
+    justify-items: center;
+  }
+
+  /* Make white boxes centered and slightly narrower */
+  .section-pad[style*="var(--page-pink)"] .container > div > div {
+    width: 100%;
+    max-width: 500px;
+  }
+
+}
+</style>
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png">
 </head>
 <body>
