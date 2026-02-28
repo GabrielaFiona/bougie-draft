@@ -43,24 +43,10 @@
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png">
 
 <style>
-/* Bottom CTA section: uniform + mobile-centered */
-.bbp-bottom-cta{
-  background-color: var(--page-pink) !important;
-}
-.bbp-bottom-cta-grid{
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 40px !important;
-  align-items: stretch;
-}
-.bbp-bottom-cta-card{
-  background: var(--white) !important;
-  border-radius: var(--radius) !important;
-  box-shadow: var(--shadow-soft) !important;
-  border: 1px solid rgba(179, 133, 56, 0.1) !important;
-}
+/* Bottom CTA: keep desktop intact; only adjust on mobile */
+.bbp-bottom-cta{ background-color: var(--page-pink); }
 
-/* Mobile fixes */
+/* Mobile fixes (override inline styles safely) */
 @media (max-width: 768px){
   .bbp-bottom-cta{ padding-left: 0 !important; padding-right: 0 !important; }
   .bbp-bottom-cta-grid{
@@ -70,18 +56,29 @@
   }
   .bbp-bottom-cta-card{
     padding: 24px !important;
-    width: 100%;
-    max-width: 560px;
-    margin: 0 auto;
-    text-align: center;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
   }
+  .bbp-bottom-cta-card h2{ margin-bottom: 16px !important; }
+  .bbp-bottom-cta-card p{ margin-left: auto; margin-right: auto; }
+
+  /* “Bubble” buttons: keep text nicely inside the pill shape */
   .bbp-bottom-cta-card a.btn{
-    display: inline-flex;
+    width: auto !important;
+    max-width: 280px;
+    display: inline-flex !important;
     justify-content: center;
+    align-items: center;
+    padding: 14px 22px !important;
+    border-radius: 999px !important;
+    line-height: 1.2 !important;
+    white-space: normal;
+    text-align: center;
   }
 }
 </style>
-
 </head>
 <body>
 
@@ -189,7 +186,7 @@ Newport, Oregon & Lincoln County.
                         </ul>
                     </div>
                 </div>
-<div class="section-pad bbp-bottom-cta" style="background-color: var(--page-pink); border-top: 1px solid rgba(179, 133, 56, 0.15);">
+<div class="section-pad bbp-bottom-cta bbp-bottom-cta" style="background-color: var(--page-pink); border-top: 1px solid rgba(179, 133, 56, 0.15);">
   <div class="container">
     <div class="bbp-bottom-cta-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
 
