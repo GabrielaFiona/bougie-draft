@@ -24,8 +24,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NBGBXY6HN"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NBGBXY6HN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -44,6 +43,32 @@
     <style>
         /* --- Product Page Specific Styles --- */
         * { box-sizing: border-box; }
+
+        /* Unified Bottom CTA Styles */
+        .bbp-bottom-cta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .bbp-bottom-cta-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .bbp-bottom-cta-card {
+                width: 100%;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+            }
+            .section-pad[style*="var(--page-pink)"] .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+        }
 
         /* === UNIFIED SQUARE GALLERY STYLES === */
         .gallery-wrapper {
@@ -342,47 +367,45 @@ Luxury picnic tablescape rental in Newport, Oregon • Serving Lincoln County & 
             </div>
         </div>
         <div class="section-pad" style="background-color: var(--page-pink); border-top: 1px solid rgba(179, 133, 56, 0.15);">
-  <div class="container">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+          <div class="container">
+            <div class="bbp-bottom-cta-grid">
 
-      <!-- Styled Soiree FAQ -->
-      <div style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
-        <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Styled Soirée FAQ</h2>
+              <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
+                <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Quick FAQ</h2>
 
-        <h3 style="font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; font-family: var(--font-body); font-weight: 600;">Do you deliver and set up in Newport?</h3>
-        <p style="margin-bottom: 25px; font-size: 0.95rem; line-height: 1.6;">Yes — we deliver, style, and tear down. We serve Newport, Waldport, Toledo, Lincoln City, and surrounding Lincoln County areas.</p>
+                <h3 style="font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; font-family: var(--font-body); font-weight: 600;">Where do you deliver?</h3>
+                <p style="margin-bottom: 25px; font-size: 0.95rem; line-height: 1.6;">We serve Newport, Waldport, Toledo, Lincoln City, and surrounding Lincoln County areas on the Oregon Coast.</p>
 
-        <h3 style="font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; font-family: var(--font-body); font-weight: 600;">What should I bring?</h3>
-        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Bring your food + drinks (charcuterie, cake, brunch, etc.). We provide the tablescape, dining setup, and ambiance.</p>
+                <h3 style="font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; font-family: var(--font-body); font-weight: 600;">What do you offer?</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Clear bubble rentals (10x10 structured), elegant tablescapes, and outdoor movie night setups—styled and delivered.</p>
 
-        <a href="../pages/faq.html" class="btn btn-secondary" style="width: 100%;">Read Full FAQ</a>
-      </div>
+                <a href="../pages/faq.html" class="btn btn-secondary" style="width: 100%;">Read Full FAQ</a>
+              </div>
 
-      <!-- Related packages -->
-      <div style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
-        <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Make It Even More Bougie</h2>
+              <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
+                <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Explore Experiences</h2>
 
-        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
-          Want a wind-protected dining moment? Explore
-          <a href="product-dome-dining.html" style="color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold);">The Dome Dining Experience</a>.
-        </p>
+                <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+                  Planning a big-screen night? Browse
+                  <a href="../themes/watch-party.html" style="color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold);">Watch Parties</a>.
+                </p>
 
-        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
-          Looking for cozy lounging? Check out
-          <a href="product-bougie-bubble.html" style="color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold);">The Bougie Bubble</a>.
-        </p>
+                <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+                  Want a styled meal? Explore
+                  <a href="../themes/elegant-dining.html" style="color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold);">Elegant Dining</a>.
+                </p>
 
-        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px;">
-          Planning a big-screen night? Pair it with
-          <a href="product-box-office.html" style="color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold);">Box Office Bubble</a>.
-        </p>
+                <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px;">
+                  Looking for the bubble vibe? Check out
+                  <a href="../themes/bubble-bash.html" style="color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold);">Bubble Bashes</a>.
+                </p>
 
-        <a href="../pages/packages.html" class="btn btn-secondary" style="width: 100%;">Browse All Rentals</a>
-      </div>
+                <a href="../pages/packages.html" class="btn btn-secondary" style="width: 100%;">Browse All Rentals</a>
+              </div>
 
-    </div>
-  </div>
-</div>
+            </div>
+          </div>
+        </div>
     </div>
 
     <footer class="bbp-footer" role="contentinfo">
