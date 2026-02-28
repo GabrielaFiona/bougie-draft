@@ -36,6 +36,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Slab:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/CSS/style.css">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png">
+<style>
+  /* Unified Bottom CTA Styles */
+  .bbp-bottom-cta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 950px; /* Constrains width so it doesn't stretch too far on desktop */
+    margin: 0 auto;   /* Centers the grid itself */
+  }
+  @media (max-width: 768px) {
+    .bbp-bottom-cta-grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    .bbp-bottom-cta-card {
+      width: 100%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+    }
+    .section-pad[style*="var(--page-pink)"] .container {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+</style>
 </head>
 <body>
     
@@ -215,9 +242,9 @@
 
     <div class="section-pad" style="background-color: var(--page-pink); border-top: 1px solid rgba(179, 133, 56, 0.15);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+            <div class="bbp-bottom-cta-grid">
                 
-                <div style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
+                <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
                     <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Outdoor Movie Night FAQ</h2>
                     
                     <h3 style="font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; font-family: var(--font-body); font-weight: 600;">Do you deliver in Newport, Oregon?</h3>
@@ -227,7 +254,7 @@
                     <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Absolutely. Our 4K projector and oversized screen are perfect for sports events, pay-per-view nights, and championship games.</p>
                 </div>
 
-                <div style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
+                <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
                     <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">More From Bougie</h2>
                     
                     <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
