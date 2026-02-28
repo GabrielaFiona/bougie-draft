@@ -46,6 +46,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
+      max-width: 950px; /* Constrains width so it doesn't stretch too far on desktop */
+      margin: 0 auto;   /* Centers the grid itself */
     }
     @media (max-width: 768px) {
       .bbp-bottom-cta-grid {
@@ -95,7 +97,7 @@
         </div>
     </header>
 
-    <div class="section-pad bbp-bottom-cta" style="padding-bottom: 40px; background-color: var(--white);">
+    <div class="section-pad" style="padding-bottom: 40px; background-color: var(--white);">
         <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
             <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem);">Contact Us</h1>
 <p style="font-size: 1.1rem; max-width: 700px; margin: 10px auto 0; color:#777;">
