@@ -49,8 +49,7 @@
   "url": "https://thebougiebeachpartyco.com/packages"
 }
 </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NBGBXY6HN"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NBGBXY6HN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -66,6 +65,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Slab:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/CSS/style.css">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png">
+    <style>
+    /* Unified Bottom CTA Styles */
+    .bbp-bottom-cta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    @media (max-width: 768px) {
+      .bbp-bottom-cta-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      .bbp-bottom-cta-card {
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+      .section-pad[style*="var(--page-pink)"] .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+    </style>
 </head>
 <body>
     
@@ -256,10 +280,9 @@
             </div>
 <div class="section-pad" style="background-color: var(--page-pink); border-top: 1px solid rgba(179, 133, 56, 0.15);">
   <div class="container">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+    <div class="bbp-bottom-cta-grid">
 
-      <!-- FAQ CTA -->
-      <div style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
+      <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
         <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Before You Book</h2>
 
         <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
@@ -269,8 +292,7 @@
         <a href="faq.html" class="btn btn-secondary" style="width: 100%;">Read Full FAQ</a>
       </div>
 
-      <!-- Internal links -->
-      <div style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
+      <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
         <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Explore By Vibe</h2>
 
         <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
