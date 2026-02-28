@@ -53,6 +53,20 @@
   }
 }
 </style>
+<style>
+/* BOTTOM CTA MOBILE FIX: keep original sizing/text, just center with equal side space */
+@media (max-width: 768px) {
+  /* add equal breathing room on both sides */
+  .section-pad[style*="var(--page-pink)"] .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  /* prevent the minmax(350px, 1fr) grid from causing horizontal overflow/offset */
+  .section-pad[style*="var(--page-pink)"] .container > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
 </head>
 <body>
 
