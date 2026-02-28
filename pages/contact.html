@@ -46,7 +46,32 @@
 @media (max-width: 768px) {
   .bbp-bottom-cta-grid { justify-items: center; }
   .bbp-bottom-cta-card { margin-left: auto; margin-right: auto; }
-}</style></head>
+}</style><style>
+/* Mobile-only: keep desktop identical; just ensure the bottom pink CTA boxes are centered with equal side spacing */
+@media (max-width: 768px){
+  /* target the bottom pink CTA section only */
+  .section-pad[style*="background-color: var(--page-pink)"] .container{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .section-pad[style*="background-color: var(--page-pink)"] .container > div[style*="grid-template-columns"]{
+    grid-template-columns: 1fr !important; /* prevents minmax(350px,1fr) overflow/offset */
+    justify-items: stretch !important;
+  }
+  .section-pad[style*="background-color: var(--page-pink)"] .container > div[style*="grid-template-columns"] > div{
+    width: 100% !important;           /* keep same feel; fill column */
+    max-width: none !important;       /* don't artificially shrink */
+    margin-left: auto !important;     /* equal space on both sides */
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+  /* make the full-width CTA button look centered without changing desktop */
+  .section-pad[style*="background-color: var(--page-pink)"] .btn.btn-secondary{
+    max-width: 100%;
+  }
+}
+</style>
+</head>
 <body>
 <header class="site-header">
 <div class="container header-inner">
