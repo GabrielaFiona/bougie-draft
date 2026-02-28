@@ -25,7 +25,6 @@
   ]
 }
 </script>
-<!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3NBGBXY6HN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -42,35 +41,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;family=Josefin+Slab:wght@400;600&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <link href="../assets/CSS/style.css" rel="stylesheet"/>
 <link href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png" rel="icon" type="image/png"/>
-<style data-id="bbp-bottom-cta-mobile-center">/* Mobile-only: center the bottom CTA white boxes without changing desktop layout */
-@media (max-width: 768px) {
-  .bbp-bottom-cta-grid { justify-items: center; }
-  .bbp-bottom-cta-card { margin-left: auto; margin-right: auto; }
-}</style><style>
-/* Mobile-only: keep desktop identical; just ensure the bottom pink CTA boxes are centered with equal side spacing */
-@media (max-width: 768px){
-  /* target the bottom pink CTA section only */
-  .section-pad[style*="background-color: var(--page-pink)"] .container{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-  .section-pad[style*="background-color: var(--page-pink)"] .container > div[style*="grid-template-columns"]{
-    grid-template-columns: 1fr !important; /* prevents minmax(350px,1fr) overflow/offset */
-    justify-items: stretch !important;
-  }
-  .section-pad[style*="background-color: var(--page-pink)"] .container > div[style*="grid-template-columns"] > div{
-    width: 100% !important;           /* keep same feel; fill column */
-    max-width: none !important;       /* don't artificially shrink */
-    margin-left: auto !important;     /* equal space on both sides */
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  }
-  /* make the full-width CTA button look centered without changing desktop */
-  .section-pad[style*="background-color: var(--page-pink)"] .btn.btn-secondary{
-    max-width: 100%;
-  }
-}
-</style>
+    <style>
+    /* Unified Bottom CTA Styles */
+    .bbp-bottom-cta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    @media (max-width: 768px) {
+      .bbp-bottom-cta-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      .bbp-bottom-cta-card {
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+      .section-pad[style*="var(--page-pink)"] .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+    </style>
 </head>
 <body>
 <header class="site-header">
@@ -250,8 +245,7 @@
 </div>
 <div class="bbp-bottom-cta section-pad" style="background-color: var(--page-pink); border-top: 1px solid rgba(179, 133, 56, 0.15);">
 <div class="container">
-<div class="bbp-bottom-cta-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
-<!-- Contact / next step -->
+<div class="bbp-bottom-cta-grid">
 <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
 <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Still Have Questions?</h2>
 <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
@@ -259,7 +253,6 @@
         </p>
 <a class="btn btn-primary" href="contact.html" style="width: 100%;">Contact Us</a>
 </div>
-<!-- Internal links -->
 <div class="bbp-bottom-cta-card" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(179, 133, 56, 0.1);">
 <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--ink);">Explore Rentals</h2>
 <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
