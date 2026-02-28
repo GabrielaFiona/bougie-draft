@@ -42,27 +42,22 @@
     <link rel="stylesheet" href="../assets/CSS/style.css">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielaFiona/bougie-assets/3f8b85245206b18ae4050463b5044ed74ea5782b/sunlogotrans.png">
 <style>
-/* Mobile-only: keep desktop identical; center ONLY the bottom CTA white boxes by preventing grid overflow */
-@media (max-width: 768px){
-  .bbp-bottom-cta .container{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+/* Bottom CTA: keep desktop exactly like index (side-by-side), center cards on mobile with equal side space */
+@media (min-width: 769px) {
   .bbp-bottom-cta-grid{
-    grid-template-columns: 1fr !important; /* overrides inline minmax that can offset cards on narrow phones */
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(350px, 1fr)) !important;
+    gap: 40px !important;
   }
 }
-</style>
-<style>
-/* BOTTOM CTA MOBILE FIX: keep original sizing/text, just center with equal side space */
 @media (max-width: 768px) {
-  /* add equal breathing room on both sides */
-  .section-pad[style*="var(--page-pink)"] .container {
+  /* equal breathing room on both sides */
+  .section-pad[style*="var(--page-pink)"] .container{
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
-  /* prevent the minmax(350px, 1fr) grid from causing horizontal overflow/offset */
-  .section-pad[style*="var(--page-pink)"] .container > div[style*="grid-template-columns"] {
+  /* prevent overflow/offset from minmax(350px, 1fr) */
+  .bbp-bottom-cta-grid{
     grid-template-columns: 1fr !important;
   }
 }
@@ -246,3 +241,4 @@ Contact The Bougie Beach Party Co. to book party rentals, luxury picnic tablesca
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
+
